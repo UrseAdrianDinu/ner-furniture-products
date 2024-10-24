@@ -1,0 +1,30 @@
+<h1>Furniture products search</h1>
+
+<ng-container class="d-flex">
+
+  <form class="form" role="form" (ngSubmit)="predict()" [formGroup]="inputForm">
+    <!-- Input Text Box -->
+    <div style="display: flex; flex-direction: column">
+      <label for="inputText" style="font-size: 18px;font-weight: bold">Input Text:</label>
+      <textarea name="inputText" id="inputText" class="form-control" formControlName="inputText" rows="4" cols="50" placeholder="Enter input text here"></textarea>
+    </div>
+    <button type="submit" style="margin-top:10px; background-color: #ee7a28; color: black; font-size: 18px; padding: 10px 8px;border: orange; font-weight: bold; border-radius: 10px" class="btn btn-primary">Extract products</button>
+  </form>
+
+<!--  &lt;!&ndash; Text Area &ndash;&gt;-->
+<!--  <div style="display: flex;flex-direction: column; margin-top: 10px">-->
+<!--    <label for="modelOutputText" style="font-size: 18px; font-weight: bold">Extracted products:</label>-->
+<!--    <textarea id="modelOutputText" name="outputText" rows="4" cols="50" placeholder="Output text will appear here" [(ngModel)]="modelOutputText"></textarea>-->
+<!--  </div>-->
+
+  <div *ngIf="modelOutputText && modelOutputText.length > 0">
+    <h3>Extracted Products:</h3>
+    <div class="grid-container">
+      <div class="grid-item" *ngFor="let product of modelOutputText">{{ product }}</div>
+    </div>
+  </div>
+
+
+
+
+</ng-container>

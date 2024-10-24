@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Defines multiple columns */
+  gap: 15px;  /* Adds space between the grid items */
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #f9f9f9;  /* You can change this to fit your design */
+  padding: 5px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  text-align: center;
+  word-wrap: break-word;  /* Prevents words from overflowing */
+  font-weight: bold;
+}
