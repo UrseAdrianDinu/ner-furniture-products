@@ -136,7 +136,7 @@ def extract_text(html_content):
 # Initialize the Flask app
 app = Flask(__name__)
 CORS(app, resources={r"/predict": {"origins": "http://localhost:4200", "methods": ["POST", "OPTIONS"]}})
-stopwords = {"and", "for", "from", "give", "away"}
+stopwords = {"and", "for", "from", "give", "away", "just", "kids", "look", "put", "months"}
 
 
 @app.route("/predict", methods=["POST"])
